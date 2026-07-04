@@ -2,7 +2,7 @@ import customtkinter as ctk
 from widgets import init_widget, init_menubar
 from filelogic import openfile, saveAs
 
-__version__ = "0.1"
+__version__ = "0.11"
 
 def main():
     root = ctk.CTk()
@@ -11,7 +11,7 @@ def main():
 
     textbox = ctk.CTkTextbox(root)
 
-    init_menubar(root, textbox)
+    init_menubar(root, textbox, version_label=__version__)
 
     textbox.pack(expand=True, fill="both")
 
